@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3909e6a-99a7-4417-b96d-1b3bfc4cac58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Magazine/src/main/resources/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Magazine/src/main/resources/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Magazine/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Magazine/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../banco de dados/bd-magazine" beforeDir="false" afterPath="$PROJECT_DIR$/../banco de dados/bd-magazine" afterDir="false" />
-    </list>
+    <list default="true" id="a3909e6a-99a7-4417-b96d-1b3bfc4cac58" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
