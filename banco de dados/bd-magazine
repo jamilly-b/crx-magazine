@@ -1,3 +1,5 @@
+CREATE DATABASE crxmagazine;
+
 CREATE TABLE Usuario (
     Id SERIAL PRIMARY KEY,
     Email VARCHAR(100),
