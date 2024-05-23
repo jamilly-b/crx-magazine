@@ -1,0 +1,58 @@
+CREATE TABLE Usuario (
+    Id SERIAL PRIMARY KEY,
+    Email VARCHAR(100),
+    Senha VARCHAR(255),
+    Nome VARCHAR(50),
+    Icone VARCHAR(255),
+    DescricaoUsuario TEXT,
+    Autor BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE Artigo (
+    Id SERIAL PRIMARY KEY,
+    Titulo VARCHAR(255) NOT NULL,
+    Subtitulo VARCHAR(255),
+    Curtidas INTEGER DEFAULT 0,
+    Conteudo TEXT NOT NULL,
+    DataPublicacao DATE,
+    CategoriaId INTEGER,
+    FOREIGN KEY (CategoriaId) REFERENCES Categoria(Id) ON DELETE SET NULL
+);
+
+CREATE TABLE Categoria (
+    Id SERIAL PRIMARY KEY,
+    Nome VARCHAR(30) NOT NULL UNIQUE
+);
+
+CREATE TABLE Comentario (
+    Id SERIAL PRIMARY KEY,
+    UsuarioId INTEGER,
+    ArtigoId INTEGER,
+    Comentario TEXT NOT NULL,
+    FOREIGN KEY (UsuarioId) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (ArtigoId) REFERENCES Artigo(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE Publica (
+    UsuarioId INTEGER,
+    ArtigoId INTEGER,
+    PRIMARY KEY (UsuarioId, ArtigoId),
+    FOREIGN KEY (UsuarioId) REFERENCES Usuario(Id) ON DELETE RESTRICT,
+    FOREIGN KEY (ArtigoId) REFERENCES Artigo(Id) ON DELETE CASCADE
+);
+
+CREATE TABLE Possui (
+    ArtigoId INTEGER,
+    CategoriaId INTEGER,
+    PRIMARY KEY (ArtigoId, CategoriaId),
+    FOREIGN KEY (ArtigoId) REFERENCES Artigo(Id) ON DELETE CASCADE,
+    FOREIGN KEY (CategoriaId) REFERENCES Categoria(Id) ON DELETE RESTRICT
+);
+
+CREATE TABLE Escreve (
+    UsuarioId INTEGER,
+    ArtigoId INTEGER,
+    PRIMARY KEY (UsuarioId, ArtigoId),
+    FOREIGN KEY (UsuarioId) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (ArtigoId) REFERENCES Artigo(Id) ON DELETE CASCADE
+);

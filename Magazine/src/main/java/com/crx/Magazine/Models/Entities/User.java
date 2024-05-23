@@ -4,7 +4,7 @@ public class User {
 
     private int id;
     private String email;
-    private String password;
+    private String senha;
     private String nome;
     private String icone;
     private String descricaoUsuario;

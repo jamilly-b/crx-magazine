@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.List;
 
 public class Artigo {
@@ -6,10 +7,8 @@ public class Artigo {
     private String titulo;
     private String subtitulo;
     private String conteudo;
-    private Data data;
-    private User escritor;
+    private Date dataPublicacao;
     private int curtidas;
+    private User escritor;
     private List<Comentarios> comentarios;
-
-    private User user;
 }
