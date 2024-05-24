@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3909e6a-99a7-4417-b96d-1b3bfc4cac58" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Magazine/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magazine/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../magazine/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/Categorias.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/Categorias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/Comentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/Comentarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/src/main/java/com/crx/Magazine/Models/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Magazine/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Magazine/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +63,7 @@
       <workItem from="1716413880410" duration="2628000" />
       <workItem from="1716474947271" duration="583000" />
       <workItem from="1716476131195" duration="599000" />
+      <workItem from="1716511984231" duration="39000" />
     </task>
     <servers />
   </component>

@@ -19,4 +19,36 @@ public class Comentarios {
     @ManyToOne
     @JoinColumn(name = "artigo_id")
     private Artigo artigo;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public User getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(User usuario) {
+        this.usuario = usuario;
+    }
+
+    public Artigo getArtigo() {
+        return artigo;
+    }
+
+    public void setArtigo(Artigo artigo) {
+        this.artigo = artigo;
+    }
 }
