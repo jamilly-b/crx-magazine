@@ -19,6 +19,8 @@ public class Artigo {
     private String titulo;
     private String subtitulo;
     @NotNull
+    private String imagemArtigo;
+    @NotNull
     @Lob
     private String conteudo;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
@@ -28,6 +30,15 @@ public class Artigo {
     @JoinColumn(name = "escritor_id")
     @NotNull
     private User escritor;
+
+    public String getImagemArtigo() {
+        return imagemArtigo;
+    }
+
+    public void setImagemArtigo(String imagemArtigo) {
+        this.imagemArtigo = imagemArtigo;
+    }
+
 
     @OneToMany(mappedBy = "artigo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comentarios> comentarios = new ArrayList<>();

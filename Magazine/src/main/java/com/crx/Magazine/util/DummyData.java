@@ -22,26 +22,26 @@ public class DummyData {
     @Autowired
     UserRepository userRepository;
 
-    //@PostConstruct
+    @PostConstruct
     public void criarArtigosDummy() {
         List<Artigo> artigoList = new ArrayList<>();
 
         // Usuarios
         User user1 = new User();
-        user1.setNome("João");
+        user1.setNome("João Ferreira");
         user1.setEmail("joao@example.com");
         user1.setSenha("senha123");
         user1.setDescricaoUsuario("Desenvolvedor Java");
 
         User user2 = new User();
-        user2.setNome("Maria");
+        user2.setNome("Maria Santiago");
         user2.setEmail("maria@gmail.com");
         user2.setSenha("senha123");
         user2.setDescricaoUsuario("Jornalista e escritora de contos");
         user2.setEscritor(true);
 
         User user3 = new User();
-        user3.setNome("Pedro");
+        user3.setNome("Pedro Costa");
         user3.setEmail("pedro@gmail.com");
         user3.setSenha("senha123");
         user3.setDescricaoUsuario("Engenheiro de soft e escritor");
@@ -51,10 +51,11 @@ public class DummyData {
         userRepository.save(user2);
         userRepository.save(user3);
 
-        // Artigo 1
+        // Artigos 1
         Artigo artigo1 = new Artigo();
         artigo1.setTitulo("Introdução à Programação");
         artigo1.setSubtitulo("Conceitos básicos para iniciantes");
+        artigo1.setImagemArtigo("https://picsum.photos/200/300");
         artigo1.setConteudo("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "Pellentesque euismod tristique neque, at venenatis metus venenatis vel. " +
                 "Integer luctus augue ac lacinia bibendum.");
@@ -62,12 +63,27 @@ public class DummyData {
         artigo1.setCurtidas(10);
         artigo1.setEscritor(user3);
 
+        Artigo artigo2 = new Artigo();
+        artigo2.setTitulo("Lorem ipsum dolor sit amet, consectetur");
+        artigo2.setSubtitulo("Lorem ipsum dolor sit amet, consectetur adipiscing elit. \" +\n" +
+                "                \"Pellentesque euismod tristique neque, at");
+        artigo2.setImagemArtigo("https://picsum.photos/200/300");
+        artigo2.setConteudo("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                "Pellentesque euismod tristique neque, at venenatis metus venenatis vel. " +
+                "Integer luctus augue ac lacinia bibendum.");
+        artigo2.setDataPublicacao(LocalDate.now());
+        artigo2.setCurtidas(23);
+        artigo2.setEscritor(user3);
+
+
         // Categorias
         List<Categorias> categorias = new ArrayList<>();
-        Categorias categoria1 = new Categorias();
-        categoria1.setNome("Programação");
-        categorias.add(categoria1);
-        artigo1.setCategoria(categorias);
+//        Categorias categoria1 = new Categorias();
+//        categoria1.setNome("Programação");
+//        categorias.add(categoria1);
+        Categorias categoria2 = new Categorias();
+        categoria2.setNome("Lorem");
+        artigo2.setCategoria(categorias);
 
         // Comentários
         List<Comentarios> comentarios = new ArrayList<>();
@@ -79,8 +95,12 @@ public class DummyData {
         artigo1.setComentarios(comentarios);
 
         artigoList.add(artigo1);
+        artigoList.add(artigo2);
 
         magazineRepository.save(artigo1);
+        magazineRepository.save(artigo2);
+
         System.out.println(artigo1.getId());
+        System.out.println(artigo2.getId());
     }
 }
