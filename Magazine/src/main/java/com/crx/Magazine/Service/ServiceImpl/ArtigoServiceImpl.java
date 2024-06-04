@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class ArtigoServiceImpl implements ArtigoService {
 
@@ -19,8 +21,8 @@ public class ArtigoServiceImpl implements ArtigoService {
     }
 
     @Override
-    public Artigo findById(Integer id) {
-        return magazineRepository.getReferenceById(id);
+    public Optional<Artigo> findById(Integer id) {
+        return magazineRepository.findById(id);
     }
 
     @Override

@@ -22,7 +22,7 @@ public class DummyData {
     @Autowired
     UserRepository userRepository;
 
-    @PostConstruct
+    //@PostConstruct
     public void criarArtigosDummy() {
         List<Artigo> artigoList = new ArrayList<>();
 
