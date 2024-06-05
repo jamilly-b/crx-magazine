@@ -1,8 +1,3 @@
-* {
-    padding: 0px;
-    margin: 0px;
-}
-
 header{
     display: flex;
     flex-direction: column;
@@ -15,27 +10,31 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
-    margin: 10px 30px;
+    padding: 15px 10px;
 }
 
 #top-bar .navbar-logo img{
-    height: 100%;
+    height: 100px;
     width: 100px;
 }
 
 #top-bar .navbar-buttons {
-    background-color: burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #top-bar .navbar-buttons button{
+    display: flex;
+    align-items: center;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
     height: 40px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
 }
 
 .navbar-buttons button svg {
@@ -57,4 +56,28 @@ header nav ul {
     list-style: none;
     color: aliceblue;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    #top-bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 10px 0;
+    }
+
+    #top-bar .navbar-buttons button{
+        padding: 10px;
+        height: 30px;
+    }
+
+    .navbar-logo{
+        display: none;
+    }
+
+    header nav{
+        display: none;
+    }
 }

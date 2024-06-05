@@ -33,21 +33,4 @@ public class MagazineController {
         mv.addObject("materia", materia);
         return mv;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
