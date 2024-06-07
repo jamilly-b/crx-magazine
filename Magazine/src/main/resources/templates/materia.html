@@ -1,43 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="http://127.0.0.1:5500/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/materia.css">
+    <title>CRX Magazine</title>
 </head>
 <body>
-    <header>
-        <div id="top-bar">
-            <div class="navbar-logo">
-                <img src="https://e.snmc.io/i/600/w/e1f0a923fb16268e69a38cbb63f70fe6/10078213" alt="">
-            </div>
-            <h1 class="navbar-titulo">
-                <a class="navbar-title-link" href="/artigos.html">
-                    <img class="navbar-logo-wordmark" src="" alt="CRX Magazine">
-                </a>
-            </h1>
-            <div class="navbar-buttons">
-                <button id="search-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-                </button>
-                <button id="subscribe-button">Subscrever</button>
-                <button id="login-button">Entrar</button>
-            </div>
+<header>
+    <div id="top-bar">
+        <div class="navbar-logo">
+            <img src="https://e.snmc.io/i/600/w/e1f0a923fb16268e69a38cbb63f70fe6/10078213" alt="">
         </div>
-        <nav>
+        <h1 class="navbar-titulo">
+            <a class="navbar-title-link" href="/materiaindividual.html">
+                <img class="navbar-logo-wordmark" src="" alt="CRX Magazine">
+            </a>
+        </h1>
+        <div class="navbar-buttons">
+            <button id="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </button>
+            <button id="subscribe-button">Subscrever</button>
+            <button id="login-button">Entrar</button>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+            <li>item 6</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="conteudo">
+        <h1 th:text="${materia.titulo}"></h1>
+        <h2 th:text="${materia.subtitulo}"></h2>
+        <div>
+            <p class="author-name" th:text="${materia.escritor.getNome()}">Nome do autor</p>
+            <p class="article-date" th:text="${materia.dataPublicacao}">Data</p>
+        </div>
+        <div class="texto">
+            <p th:utext="${materia.conteudo}"></p>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>Sobre Nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero ac orci fermentum efficitur.</p>
+        </div>
+        <div class="footer-section links">
+            <h2>Links Úteis</h2>
             <ul>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
-                <li>item 4</li>
-                <li>item 5</li>
-                <li>item 6</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>publicacao</h1>
-    </main>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contato</h2>
+            <ul>
+                <li>Email: email@exemplo.com</li>
+                <li>Endereço: Recife, PE</li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h2>Redes Sociais</h2>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="instagram-icon.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy;2024 CRX MAGAZINE | Todos os direitos reservados</span>
+        <div class="developer-credit">
+            <a href="https://github.com/jamilly-b">Desenvolvido por Jamilly Braga</a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

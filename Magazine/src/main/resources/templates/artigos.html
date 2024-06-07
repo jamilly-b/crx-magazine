@@ -47,11 +47,11 @@
             <h2>Mais Matérias</h2>
             <div class="card" th:each="artigo : ${artigos}">
                 <div class="card-content">
-                    <a th:href="@{/materia/{id}(id=${artigo.id})}">
+                    <a th:href="${(#mvc.url('MC#getArtigoDetail').arg(0, artigo.id)).build()}">
                         <img th:src="${artigo.imagemArtigo}" alt="">
                     </a>
                     <div class="article-data">
-                        <a th:href="@{/materia/{id}(id=${artigo.id})}">
+                        <a th:href="${(#mvc.url('MC#getArtigoDetail').arg(0, artigo.id)).build()}">
                             <div class="card-topic">
                                 <h3 class="card-title" th:text="${artigo.titulo}"></h3>
                                 <p class="subtitle" th:utext="${#strings.abbreviate(artigo.subtitulo, 100)}"></p>

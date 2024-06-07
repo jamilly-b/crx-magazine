@@ -29,8 +29,20 @@ public class MagazineController {
     @RequestMapping(value = "/materia/{id}", method = RequestMethod.GET)
     public ModelAndView getArtigoDetail(@PathVariable("id") Integer id){
         ModelAndView mv = new ModelAndView("materia");
-        Optional<Artigo> materia = magazineRepository.findById(id);
-        mv.addObject("materia", materia);
+        Optional<Artigo> optionalMateria = magazineRepository.findById(id);
+        if (optionalMateria.isPresent()) {
+            Artigo materia = optionalMateria.get();
+            System.out.println("Titulo: " + materia.getTitulo());
+            System.out.println("Subtitulo: " + materia.getSubtitulo());
+            System.out.println("Escritor: " + materia.getEscritor());
+            System.out.println("Data Publicacao: " + materia.getDataPublicacao());
+            System.out.println("Conteudo: " + materia.getConteudo());
+            mv.addObject("materia", materia);
+        } else {
+            mv.addObject("error", "Artigo não encontrado");
+        }
         return mv;
     }
+
+
 }
