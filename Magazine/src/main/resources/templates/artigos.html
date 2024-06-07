@@ -60,7 +60,9 @@
                         <div class="card-info">
                             <p class="article-date" th:text="${artigo.dataPublicacao}"></p>
                             <p class="bullet">&bull;</p>
-                            <p class="author-name" th:text="${artigo.escritor.getNome()}"></p>
+                            <a th:href="${#mvc.url('MC#getAutorDetails').arg(0, artigo.escritor.nome).arg(1, artigo.escritor.id).build()}">
+                                <p class="author-name" th:text="${artigo.escritor.nome}"></p>
+                            </a>
                         </div>
                         <div class="card-data">
                             <div class="likes">
