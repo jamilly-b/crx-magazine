@@ -1,0 +1,87 @@
+.user-container{
+    padding: 0 80px;
+}
+
+.user-top-container{
+    display: flex;
+}
+
+.user-details{
+    width: 35%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details p{
+    text-align: justify;
+}
+
+.user-details img{
+    width: 100%;
+    border-radius: 5%;
+    padding: 5px;
+}
+
+.user-details h2{
+    margin: 20px 0;
+}
+
+.user-most-famous{
+    width: 65%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.user-most-famous h2{
+    padding-bottom: 10px;
+}
+
+.user-container hr{
+    margin: 20px 0 0 0;
+    color: rgb(199, 198, 198);
+    font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    .user-top-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-details, .user-most-famous {
+        width: 100%;
+    }
+
+    .user-details .user-picture{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-picture img{
+        width: 150px;
+        height: 175px;
+    }
+
+    .user-most-famous h2{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .user-container {
+        padding: 10px 20px;
+    }
+    .user-top-container {
+        flex-direction: column;
+    }
+    .user-details, .user-most-famous {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}

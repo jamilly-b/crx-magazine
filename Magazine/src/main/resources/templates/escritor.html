@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/escritor.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <title>Document</title>
+</head>
+<body>
+<header>
+  <div id="top-bar">
+    <div class="navbar-logo">
+      <img src="https://e.snmc.io/i/600/w/e1f0a923fb16268e69a38cbb63f70fe6/10078213" alt="">
+    </div>
+    <h1 class="navbar-titulo">
+      <a class="navbar-title-link" href="/materiaindividual.html">
+        <img class="navbar-logo-wordmark" src="" alt="CRX Magazine">
+      </a>
+    </h1>
+    <div class="navbar-buttons">
+      <button id="search-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      <button id="subscribe-button">Subscrever</button>
+      <button id="login-button">Entrar</button>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="user-container">
+    <div class="user-top-container">
+      <div class="user-details">
+        <div class="user-picture"><img src="https://picsum.photos/350/300?random=1" alt=""></div>
+        <h2>Nome da pessoa</h3>
+          <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eaque, explicabo deleniti non, similique id architecto error asperiores fugit voluptates ipsam soluta! Error numquam pariatur sequi dignissimos voluptatum ut veritatis.
+            Consequatur atque delectus tempore vero, voluptate officiis assumenda suscipit sapiente mollitia temporibus laboriosam reprehenderit et harum ab. Consectetur hic distinctio ad ducimus adipisci dignissimos a tempora illo delectus, officia aspernatur.
+            Dignissimos numquam vero omnis et, ad architecto mollitia officiis, recusandae unde modi voluptates asperiores fugit provident magnam blanditiis? Corporis optio sit fugit ea dolorum repellat, quae eveniet voluptatem consectetur quasi.</p>
+      </div>
+      <div class="user-most-famous">
+        <h2>Mais de {Nome escritor}</h2>
+        <div class="card">
+          <div class="card-content">
+            <a href="materiaindividual.html"><img src="https://picsum.photos/200/300?random=2" alt="Image description"></a>
+            <div class="article-data">
+              <a href="materiaindividual.html">
+                <div class="card-topic">
+                  <h3 class="card-title">Título do Artigo</h3>
+                  <p class="subtitle">Subtítulo do artigo abreviado para 100 caracteres...</p>
+                </div>
+              </a>
+              <div class="card-info">
+                <p class="article-date">Data de Publicação</p>
+                <p class="bullet">&bull;</p>
+                <p class="author-name">Nome do Autor</p>
+              </div>
+              <div class="card-data">
+                <div class="likes">
+                  <button class="like-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                    </svg>
+                  </button>
+                  <button class="liked-article hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                    </svg>
+                  </button>
+                  <p class="likes-number">123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <a href="materiaindividual.html"><img src="https://picsum.photos/200/300?random=2" alt="Image description"></a>
+            <div class="article-data">
+              <a href="materiaindividual.html">
+                <div class="card-topic">
+                  <h3 class="card-title">Título do Artigo</h3>
+                  <p class="subtitle">Subtítulo do artigo abreviado para 100 caracteres...</p>
+                </div>
+              </a>
+              <div class="card-info">
+                <p class="article-date">Data de Publicação</p>
+                <p class="bullet">&bull;</p>
+                <p class="author-name">Nome do Autor</p>
+              </div>
+              <div class="card-data">
+                <div class="likes">
+                  <button class="like-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                    </svg>
+                  </button>
+                  <button class="liked-article hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                    </svg>
+                  </button>
+                  <p class="likes-number">123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <a href="materiaindividual.html"><img src="https://picsum.photos/200/300?random=2" alt="Image description"></a>
+            <div class="article-data">
+              <a href="materiaindividual.html">
+                <div class="card-topic">
+                  <h3 class="card-title">Título do Artigo</h3>
+                  <p class="subtitle">Subtítulo do artigo abreviado para 100 caracteres...</p>
+                </div>
+              </a>
+              <div class="card-info">
+                <p class="article-date">Data de Publicação</p>
+                <p class="bullet">&bull;</p>
+                <p class="author-name">Nome do Autor</p>
+              </div>
+              <div class="card-data">
+                <div class="likes">
+                  <button class="like-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                    </svg>
+                  </button>
+                  <button class="liked-article hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                    </svg>
+                  </button>
+                  <p class="likes-number">123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <a href="materiaindividual.html"><img src="https://picsum.photos/200/300?random=2" alt="Image description"></a>
+            <div class="article-data">
+              <a href="materiaindividual.html">
+                <div class="card-topic">
+                  <h3 class="card-title">Título do Artigo</h3>
+                  <p class="subtitle">Subtítulo do artigo abreviado para 100 caracteres...</p>
+                </div>
+              </a>
+              <div class="card-info">
+                <p class="article-date">Data de Publicação</p>
+                <p class="bullet">&bull;</p>
+                <p class="author-name">Nome do Autor</p>
+              </div>
+              <div class="card-data">
+                <div class="likes">
+                  <button class="like-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                    </svg>
+                  </button>
+                  <button class="liked-article hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                    </svg>
+                  </button>
+                  <p class="likes-number">123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <a href="materiaindividual.html"><img src="https://picsum.photos/200/300?random=2" alt="Image description"></a>
+            <div class="article-data">
+              <a href="materiaindividual.html">
+                <div class="card-topic">
+                  <h3 class="card-title">Título do Artigo</h3>
+                  <p class="subtitle">Subtítulo do artigo abreviado para 100 caracteres...</p>
+                </div>
+              </a>
+              <div class="card-info">
+                <p class="article-date">Data de Publicação</p>
+                <p class="bullet">&bull;</p>
+                <p class="author-name">Nome do Autor</p>
+              </div>
+              <div class="card-data">
+                <div class="likes">
+                  <button class="like-article">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                    </svg>
+                  </button>
+                  <button class="liked-article hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                      <path fill="#F84242" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                    </svg>
+                  </button>
+                  <p class="likes-number">123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>Sobre Nós</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac libero ac orci fermentum efficitur.</p>
+    </div>
+    <div class="footer-section links">
+      <h2>Links Úteis</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h2>Contato</h2>
+      <ul>
+        <li>Email: email@exemplo.com</li>
+        <li>Endereço: Recife, PE</li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h2>Redes Sociais</h2>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="#"><img src="instagram-icon.png" alt="YouTube"></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy;2024 CRX MAGAZINE | Todos os direitos reservados</span>
+    <div class="developer-credit">
+      <a href="https://github.com/jamilly-b">Desenvolvido por Jamilly Braga</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
