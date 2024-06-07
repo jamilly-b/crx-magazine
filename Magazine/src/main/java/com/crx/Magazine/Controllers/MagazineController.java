@@ -32,14 +32,9 @@ public class MagazineController {
         Optional<Artigo> optionalMateria = magazineRepository.findById(id);
         if (optionalMateria.isPresent()) {
             Artigo materia = optionalMateria.get();
-            System.out.println("Titulo: " + materia.getTitulo());
-            System.out.println("Subtitulo: " + materia.getSubtitulo());
-            System.out.println("Escritor: " + materia.getEscritor());
-            System.out.println("Data Publicacao: " + materia.getDataPublicacao());
-            System.out.println("Conteudo: " + materia.getConteudo());
             mv.addObject("materia", materia);
         } else {
-            mv.addObject("error", "Artigo não encontrado");
+            mv.addObject("error", "Matéria não encontrada");
         }
         return mv;
     }
